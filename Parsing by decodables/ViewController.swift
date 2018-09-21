@@ -15,15 +15,15 @@ struct Course : Decodable {
     let imageUrl : String
     
     
-    init (json : [String : Any]){
-        
-        id = json["id"] as? Int ?? 1
-        name = json["name"] as? String ?? ""
-        link = json["link"] as? String ?? ""
-        imageUrl = json["imageUrl"] as? String ?? ""
-        
-        
-    }
+//    init (json : [String : Any]){
+//        
+//        id = json["id"] as? Int ?? 1
+//        name = json["name"] as? String ?? ""
+//        link = json["link"] as? String ?? ""
+//        imageUrl = json["imageUrl"] as? String ?? ""
+//        
+//        
+//    }
 }
 
 
@@ -32,6 +32,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let jsonUrl = "https://api.letsbuildthatapp.com/jsondecodable/course"
         guard let url = URL(string: jsonUrl) else {return}
